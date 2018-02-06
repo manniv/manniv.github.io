@@ -26,6 +26,11 @@
 			<div class="slides">
 				<section>Slide 1</section>
 				<section>
+				    <div class="fig-container"
+					data-fig-id="rnn-write-detail"
+					data-file="animationpages/index.html"></div>
+				</section>
+				<section>
 				<h3>Pie chart</h3>
 					<canvas class="stretch" data-chart="pie">
 					,Black, Red, Green, Yellow
@@ -72,6 +77,9 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'reveal.js-plugins/chart/Chart.min.js' },				
 					{ src: 'reveal.js-plugins/chart/csv2chart.js' },
+					{ src: 'https://d3js.org/d3.v4.min.js' },
+					{ src: 'node_modules/reveal.js-d3js/d3js.js' },
+	
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
