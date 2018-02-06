@@ -25,6 +25,14 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>Slide 1</section>
+				<section>
+				<h3>Pie chart</h3>
+					<canvas class="stretch" data-chart="pie">
+					,Black, Red, Green, Yellow
+					My first dataset, 40, 40, 20, 6
+					My second dataset, 45, 40, 25, 4
+					</canvas>
+				</section>
 				<section>Slide 2</section>
 			</div>
 		</div>
@@ -37,10 +45,33 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				chart: {
+					defaults: { 
+						global: { 
+							title: { fontColor: "#FFF" }, 
+							legend: {
+								position: "bottom",
+								labels: { fontColor: "#FFF" },
+							},
+							tooltips: {
+								labels: { fontColor: "#FFF" },
+							},
+						}, 
+						scale: { 
+							scaleLabel: { fontColor: "#FFF" }, 
+							gridLines: { color: "#FFF", zeroLineColor: "#FFF" }, 
+							ticks: { fontColor: "#FFF" }, 
+						} 
+					},
+					pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+					radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+				},
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'reveal.js-plugins/chart/Chart.min.js' },				
+					{ src: 'reveal.js-plugins/chart/csv2chart.js' },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
