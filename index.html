@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/beige.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,21 +24,183 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
 				<section>
-				    <div class="fig-container"
-					data-fig-id="rnn-write-detail"
-					data-file="animationpages/index.html"></div>
+				<h2>From Alzheimers to AI</h2>
+				<p>Manni Vattapally</p>
+				</section>
+				<section><ul>
+				<h2>Outline</h2>
+				<li class="fragment">Bachelors- FTDP</li>
+				<li class="fragment">Masters- Neuronal Simulation</li>
+				<li class="fragment">Current- From Autoencoders to RNNs</li>
+				<li class="fragment">Future- AI directed Learning</li>
+				</ul></section>
+				<section>
+					<section>
+					<h2>Bachelors</h2>
+					<li class="fragment">Bachelors- FTDP</li>
+					</section>
+					<section><ul>
+					<div class="fragment">
+					<h3>First brush with Cognition</h3>
+					<li>Studied FTDP-17</li>
+					<li>Genetic cause, mutations in MAPT</li>
+					<li>Key characteristic- Tau protein inclusions</li>
+					<p><br></p>
+					<div class="fragment">
+					<h3>Key discoveries from Literature review</h3>
+					<li>Tau acted as prion, but inclusions were benign</li>
+					<li>Cellular defence mechanism of mutated MAPT protein aggregate</li>
+					<li>Inclusions didn't directly impede function</li>
+					</ul>
+					</section>
+					<section>
+					<h3>Tau Protein Inclusions- Mouse studies</h3>
+					<ul>
+					<img src="images/tau_mice.jpg"  height="400" width="400">
+					<li>(A and B) Neuropil threads and coiled bodies in ALZ17 mouse</li>
+					<li>(C and D) ALZ17 mouse 12 mo with homogenate</li>
+					</ul> 
+					</section>
 				</section>
 				<section>
-				<h3>Pie chart</h3>
-					<canvas class="stretch" data-chart="pie">
-					,Black, Red, Green, Yellow
-					My first dataset, 40, 40, 20, 6
-					My second dataset, 45, 40, 25, 4
-					</canvas>
+					<section><ul>
+					<h2>Masters</h2>
+					<li>Bachelors- FTDP</li>
+					<li class="fragment">Masters- Neuronal Simulation with NEURON Python</li>
+					</ul></section>
+					<section><ul>
+					<div class="fragment">
+					<h5>Motor Cortex Simulation</h5>
+					<li>Neurons defined within NEURON Python framework</li>
+					<li>MOD files for single ion channels from supervisor</li>
+					<li>Defined dimensions per neuron- Dendrites, axonal length</li>
+					<div class="fragment">
+					<h5>Causing signal oscillation</h5>
+					<li>selected one 'correct' motor neuron from simulated patch (5-16 neurons)</li>
+					<li>excitatory signals fed back to neurons firing in tandem</li>
+					<li>maintained through 'leaky' ion channels</li>
+					<li>signal convergence of nearby neurons observed</li>
+					</ul>
+					</section>
+					<section><ul>
+					<div class="fragment">
+					<h5>Visual Cortex Simulation</h5>
+					<li>Simplified model: Ball and stick</li>
+					<li>many more neurons simulated from retinal ganglion onwards</li>
+					<li>identified signals of edges and possibly color/texture</li>
+					<div class="fragment">
+					<li>LGN -> V1 -> V2 -> V4</li>
+					<li>identified possibility of 'multiple' interpretations of signal</li>
+					<li>summation observed</li>
+					<li>Very similar to CNN function</li>
+					</ul>
+					</section>
 				</section>
-				<section>Slide 2</section>
+				<section>				
+					<section><ul>
+					<h2>Current</h2>
+					<li>Bachelors- FTDP</li>
+					<li>Masters- Neuronal Simulation</li>
+					<li class="fragment">Current- From Autoencoders to RNNs</li>
+					</ul></section>
+					<section><ul>
+					<h2>Machine Learning</h2>
+					<p>Diverse projects across the field of ML</p>
+					<li class="fragment">Multi-layer perceptrons -> Autoencoders</li>
+					<li class="fragment">Recursive Neural Networks for translation</li>
+					<li class="fragment">Convoluted Neural Networks for the MNIST dataset</li>
+					</ul></section>
+					<section>
+					<h3>The Universal Function Approximator</h3>
+					<ul>
+					<img src="images/networktopology.png"  height="150" width="400">
+					<li>Can approximate any function with non-linear hidden units</li>
+					<li>very slow to train (no. of hyperparameters related to an exponential function of node number)</li>
+					</ul> 
+					</section>
+					<section>
+					<h3>Autoencoder</h3>
+					<ul>
+					<img src="images/deep_autoencoder.png"  height="250" width="400">
+					<li>Backbone behind most forms of unsupervised learning</li>
+					<li>Compresses feature space, then decodes compressed vector</li>
+					<li>Encoding MNIST dataset is straightforward</li>
+					</ul> 
+					</section>
+					<section>
+					<h4>Latent Space Map</h4>
+					<img src="images/mnist_autoencode.png"  height="580" width="580">
+					</section>
+					<section>
+					<h4>Decoded Digits</h4>
+					<img src="images/shot3.png"  height="150" width="400">
+					<img src="images/shot1.png"  height="150" width="400">
+					<img src="images/shot2.png"  height="150" width="400">
+					<img src="images/shot4.png"  height="150" width="400">
+					</section>
+					<section>
+					<h3>Recurrent Neural Networks and LSTMs</h3>
+					<ul>
+					<img src="images/gers_lstm.png"  height="500" width="670">
+					</ul>
+					</section>
+					<section>
+					<h3>Recurrent Neural Networks and LSTMs</h3>
+					<ul>
+					<li>The staple architecture for time series data</li>
+					<li>My project with RNN involved translation</li>
+					<li>positional encoding key when translating between different sentence structure</li>
+					<li>Text used was between French and English</li>
+					</ul>
+					</section>
+					<section class="fig-container"
+					data-fig-id="attentional-ex2"
+					data-file="animationpages/translation.html"
+					data-transitions="1">
+					</section>
+					<section class="fig-container"
+					data-fig-id="rnn-read"
+					data-file="animationpages/rnn_read.html"
+					data-transitions="1">
+					</section>
+					<section>
+					<h3>Convolutional Neural Networks</h3>
+					<ul>
+					<img src="images/convnet.png"  height="200" width="670">
+					<li>Studied this in the context of image recognition</li>
+					<li>Identified MNIST characters with an accuracy of 72% with LeNET architecture</li>
+					</ul>
+					</section>
+				</section>
+				<section>
+					<section><ul>
+					<h2>Future</h2>
+					<li>Bachelors- FTDP</li>
+					<li>Masters- Neuronal Simulation</li>
+					<li>Current- From Autoencoders to RNNs</li>
+					<li class="fragment">Future- AI directed Learning</li>
+					</ul></section>
+					<section>
+					<h3>Directed Learning/Attention Augmentation</h3>
+					<ul>
+					<img src="images/attention.png"  height="376" width="976">
+					<li>Best visualized through image based problems</li>
+					<li>Examples: attention towards past errors, high volatility, etc</li>
+					</ul>
+					</section>
+					
+				</section>
+				<section><ul>
+				<h2>Questions?</h2>
+				</ul></section>
+				<section><ul>
+				<h4>References</h4>
+				<li>DL4J- https://deeplearning4j.org/lstm.html</li>
+				<li>Olah & Carter, "Attention and Augmented Recurrent Neural Networks", Distill, 2016. http://doi.org/10.23915/distill.00001</li>
+				<li>User BigBaloon, https://github.com/BIGBALLON/cifar-10-cnn</li>
+				</ul></section>
+
 			</div>
 		</div>
 
